@@ -8,7 +8,7 @@ import io
 import nltk
 nltk.download('punkt')
 
-st.set_page_config(page_title='InNews🇮🇳: A Summarised News📰 Portal', page_icon='./Meta/newspaper.ico')
+st.set_page_config(page_title='InNews🇮🇳: A Summarised News📰 Portal')
 
 
 def fetch_news_search_topic(topic):
@@ -48,7 +48,7 @@ def fetch_news_poster(poster_link):
         image = Image.open(io.BytesIO(raw_data))
         st.image(image, use_column_width=True)
     except:
-        image = Image.open('./Meta/no_image.jpg')
+        image = Image.open('no_image.jpg')
         st.image(image, use_column_width=True)
 
 
